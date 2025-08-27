@@ -1,5 +1,6 @@
 import React from "react";
 import ScrollReveal from "../../Components/ScrollReveal";
+import Stack from "../../Components/Stack";
 
 export default function Home() {
   return (
@@ -59,12 +60,12 @@ export default function Home() {
               src="https://dummyimage.com/460x500"
             />
           </div>
-            <div>
-              <h1>Acerca de esta propeidad </h1>
-            </div>
+           
           
           <div className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left">
-          
+           <div className="text-center mb-4">
+              <h1 className="text-4xl text-black">Acerca de esta propeidad </h1>
+            </div>
             <div className="flex flex-col mb-10 lg:items-start items-center">
               <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
                 <svg
@@ -146,6 +147,30 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Stack */}
+     <div className="flex items-center justify-center mt-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="mx-4 w-80 h-80 flex flex-col justify-center text-justify">
+            <h1 className="font-vanitasb text-4xl">Lorem ipsum</h1>
+            <p className="font-vanitasr text-xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              quia, modi nostrum dignissimos labore sapiente placeat animi magni
+            </p>
+          </div>
+          <div className="flex justify-center mx-4 w-80 h-80">
+            <Stack
+              randomRotation={true}
+              sensitivity={180}
+              sendToBackOnClick={false}
+              cardDimensions={{ width: 280, height: 280 }}
+              
+            />
+          </div>
+        </div>
+      </div>
+
+
     </main>
   );
 }
