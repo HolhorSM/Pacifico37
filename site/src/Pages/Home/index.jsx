@@ -1,12 +1,12 @@
 import React from "react";
-import ScrollReveal from "../../Components/ScrollReveal";
 import Stack from "../../Components/Stack";
+import { features } from "../../assets/Icons";
 
 export default function Home() {
   return (
-    <main>
+    <main className="mt-25">
       {/* hero Section */}
-      <section className="text-gray-600 h-screen flex items-center justify-center">
+      <section className="text-gray-600m  flex items-center justify-center">
         <div className="container mx-auto flex px-5 md:flex-row flex-col items-center justify-center">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col items-center">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
@@ -24,7 +24,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10">
             <img
               className="object-cover object-center rounded"
               alt="hero"
@@ -33,26 +33,34 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* scroll reveal */}
-      <div className=" h-screen flex items-center justify-center">
-        <div className="m-4">
-          <ScrollReveal
-            baseOpacity={1}
-            enableBlur={true}
-            baseRotation={5}
-            blurStrength={10}
-          >
-            When does a man die? When he is hit by a bullet? No! When he suffers
-            a disease? No! When he ate a soup made out of a poisonous mushroom?
-            No! A man dies when he is forgotten!
-          </ScrollReveal>
+      {/* Stack */}
+      <div className="flex items-center justify-center h-screen border-t border-b">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="mx-4 w-80 h-80 flex flex-col justify-center text-justify">
+            <h1 className="text-4xl">Lorem ipsum</h1>
+            <p className="font-vanitasr text-xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              quia, modi nostrum dignissimos labore sapiente placeat animi magni
+            </p>
+          </div>
+          <div className="flex justify-center mx-4 w-80 h-80">
+            <Stack
+              randomRotation={true}
+              sensitivity={180}
+              sendToBackOnClick={false}
+              cardDimensions={{ width: 300, height: 300 }}
+            />
+          </div>
         </div>
       </div>
 
       {/* section 2 */}
       <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto flex flex-wrap">
+        <div className="text-center mt-10">
+              <h1 className="text-4xl text-black">Acerca de esta propeidad </h1>
+            </div>
+        <div className="container px-5 py-10 mx-auto flex flex-wrap">
+  
           <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
             <img
               alt="feature"
@@ -60,12 +68,9 @@ export default function Home() {
               src="https://dummyimage.com/460x500"
             />
           </div>
-           
-          
+
           <div className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left">
-           <div className="text-center mb-4">
-              <h1 className="text-4xl text-black">Acerca de esta propeidad </h1>
-            </div>
+            
             <div className="flex flex-col mb-10 lg:items-start items-center">
               <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
                 <svg
@@ -80,8 +85,7 @@ export default function Home() {
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                 </svg>
               </div>
-              <div className="flex-grow"> 
-                
+              <div className="flex-grow">
                 <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
                   Shooting Stars
                 </h2>
@@ -115,7 +119,6 @@ export default function Home() {
                   Blue bottle crucifix vinyl post-ironic four dollar toast vegan
                   taxidermy. Gastropub indxgo juice poutine.
                 </p>
-                
               </div>
             </div>
             <div className="flex flex-col mb-10 lg:items-start items-center">
@@ -141,7 +144,6 @@ export default function Home() {
                   Blue bottle crucifix vinyl post-ironic four dollar toast vegan
                   taxidermy. Gastropub indxgo juice poutine.
                 </p>
-               
               </div>
             </div>
           </div>
@@ -149,28 +151,36 @@ export default function Home() {
       </section>
 
       {/* Stack */}
-     <div className="flex items-center justify-center mt-5">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="mx-4 w-80 h-80 flex flex-col justify-center text-justify">
-            <h1 className="font-vanitasb text-4xl">Lorem ipsum</h1>
-            <p className="font-vanitasr text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-              quia, modi nostrum dignissimos labore sapiente placeat animi magni
-            </p>
+
+      {/* amenidades */}
+      <section className="py-14">
+        <div className="max-w-screen-xl mx-auto px-4 text-center md:px-8">
+          <div className="max-w-2xl mx-auto">
+            <h3 className=" text-6xl sm:text-5xl font-vanitasb">
+              The fastest way to launch a product
+            </h3>
+            <div className="mt-5">
+              <p className="mt-3 font-vanitasr text-xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                congue, nisl eget molestie varius, enim ex faucibus purus.
+              </p>
+            </div>
           </div>
-          <div className="flex justify-center mx-4 w-80 h-80">
-            <Stack
-              randomRotation={true}
-              sensitivity={180}
-              sendToBackOnClick={false}
-              cardDimensions={{ width: 280, height: 280 }}
-              
-            />
+          <div className="mt-12">
+            <ul className="grid gap-y-8 gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
+              {features.map((item, idx) => (
+                <li key={idx} className="space-y-3">
+                  <div className="w-12 h-12 mx-auto bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center">
+                    <img src={item.icon} />
+                  </div>
+                  <h4 className="text-2xl font-vanitasb">{item.title}</h4>
+                  <p className="font-vanitasr text-lg">{item.desc}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-      </div>
-
-
+      </section>
     </main>
   );
 }
