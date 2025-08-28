@@ -3,12 +3,11 @@ import { useState, useEffect } from "react";
 export default function Navbar() {
   const [state, setState] = useState(false);
 
-  // Replace javascript:void(0) paths with your paths
+  // Navegación actualizada con mejores nombres
   const navigation = [
-    { title: "Home", path: "/" },
-    { title: "Gallery", path: "/Gallery" },
-    { title: "Contact", path: "/Contact" },
-
+    { title: "Inicio", path: "/" },
+    { title: "Galería", path: "/Gallery" },
+    { title: "Contacto", path: "/Contact" },
   ];
 
   useEffect(() => {
@@ -19,93 +18,108 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav
-  className={`fixed top-0 left-0 w-full z-50 bg-white pb-2 md:text-sm ${
-    state
-      ? "shadow-lg rounded-xl mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0"
-      : ""
-  }`}
->
-  <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
-    <div className="flex items-center justify-between py-2 md:block">
-      <a href="/">
-        <p>Pacifico37</p>
-      </a>
-      <div className="md:hidden">
-        <button
-          className="menu-btn text-gray-500 hover:text-gray-800"
-          onClick={() => setState(!state)}
-        >
-          {state ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          )}
-        </button>
-      </div>
-    </div>
-
-    <div
-      className={`flex-1 items-center mt-6 md:mt-0 md:flex ${
-        state ? "block" : "hidden"
-      } `}
-    >
-      <ul className="justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
-        {navigation.map((item, idx) => (
-          <li key={idx} className="text-gray-700 hover:text-gray-900">
-            <a href={item.path} className="block">
-              {item.title}
+    <nav className={`fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300 ${
+        state ? "shadow-xl" : "shadow-sm"
+      }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          
+          {/* Logo mejorado */}
+          <div className="flex-shrink-0">
+            <a href="/" className="flex items-center space-x-2 group">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21l18-18M9 9l12-12M21 3L9 15" />
+                </svg>
+              </div>
+              <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                Pacifico<span className="text-blue-600">37</span>
+              </span>
             </a>
-          </li>
-        ))}
-      </ul>
-      <div className="flex-1 gap-x-6 items-center justify-end space-y-4 md:flex md:space-y-0 md:mt-2">
-        <a
-          href="javascript:void(0)"
-          className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
-        >
-          Saber mas
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            className="w-5 h-5"
-          >
-            <path
-              fillRule="evenodd"
-              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</nav>
+          </div>
 
+          {/* Navegación desktop */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-8">
+              {navigation.map((item, idx) => (
+                <a
+                  key={idx}
+                  href={item.path}
+                  className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 relative group"
+                >
+                  {item.title}
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:block">
+            <a
+              href="/contact"
+              className="inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-semibold rounded-full text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+            >
+              Ver Propiedad
+              <svg className="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </a>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setState(!state)}
+              className="menu-btn inline-flex items-center justify-center p-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Abrir menú principal</span>
+              {state ? (
+                <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile menu */}
+        <div className={`md:hidden transition-all duration-300 ease-in-out ${
+          state 
+            ? "max-h-96 opacity-100" 
+            : "max-h-0 opacity-0 overflow-hidden"
+        }`}>
+          <div className="px-2 pt-2 pb-6 space-y-1 bg-white border-t border-gray-100">
+            {navigation.map((item, idx) => (
+              <a
+                key={idx}
+                href={item.path}
+                className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 block px-4 py-3 text-base font-medium rounded-lg transition-colors"
+                onClick={() => setState(false)}
+              >
+                {item.title}
+              </a>
+            ))}
+            <div className="pt-4 border-t border-gray-100">
+              <a
+                href="/contact"
+                className="flex items-center justify-center w-full px-4 py-3 text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all"
+                onClick={() => setState(false)}
+              >
+                Ver Propiedad
+                <svg className="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 }

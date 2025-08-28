@@ -1,183 +1,257 @@
 import React from "react";
 import Stack from "../../Components/Stack";
-import { features } from "../../assets/Icons";
+import { features, propertyFeatures , testimonials } from "../../assets/Icons";
 
 export default function Home() {
+   
+
+ 
   return (
-    <main className="mt-25">
-      {/* hero Section */}
-      <section className="text-gray-600m  flex items-center justify-center">
-        <div className="container mx-auto flex px-5 md:flex-row flex-col items-center justify-center">
-          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col items-center">
-            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-              Before they sold out
+    <main className="pt-16">
+      {/* Hero Section - Mejorado */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background con overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 to-gray-900/80 z-10"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1920&h=1080&fit=crop')"
+          }}
+        ></div>
+        
+        {/* Contenido */}
+        <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              Tu Hogar Frente al
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent block">
+                Océano Pacífico
+              </span>
             </h1>
-            <p className="mb-8 leading-relaxed">
-              Copper mug try-hard pitchfork pour-over freegan heirloom neutra
-              air plant cold-pressed tacos poke beard tote bag. Heirloom echo
-              park mlkshk tote bag selvage hot chicken authentic tumeric
-              truffaut hexagon try-hard chambray.
+            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed">
+              Descubre esta extraordinaria propiedad con vistas panorámicas al mar, 
+              ubicada en una de las zonas más exclusivas de la costa mexicana.
             </p>
-            <div className="flex justify-center mb-5">
-              <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-                Button
+            
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 mb-12 max-w-lg mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-400">4</div>
+                <div className="text-sm text-gray-300">Habitaciones</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-400">3.5</div>
+                <div className="text-sm text-gray-300">Baños</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-400">320m²</div>
+                <div className="text-sm text-gray-300">Construcción</div>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-full text-lg shadow-xl transform hover:scale-105 transition-all duration-300">
+                Ver Detalles Completos
+              </button>
+              <button className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold rounded-full text-lg transition-all duration-300">
+                Agendar Visita
               </button>
             </div>
           </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10">
-            <img
-              className="object-cover object-center rounded"
-              alt="hero"
-              src="https://dummyimage.com/720x600"
-            />
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
           </div>
         </div>
       </section>
-      {/* Stack */}
-      <div className="flex items-center justify-center h-screen border-t border-b">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="mx-4 w-80 h-80 flex flex-col justify-center text-justify">
-            <h1 className="text-4xl">Lorem ipsum</h1>
-            <p className="font-vanitasr text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-              quia, modi nostrum dignissimos labore sapiente placeat animi magni
+
+      {/* Stack Section - Rediseñado */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div className="space-y-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                Explora Cada Rincón de tu Futuro Hogar
+              </h2>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Navega por nuestra galería interactiva y descubre todos los espacios 
+                que hacen de esta propiedad un lugar único. Desde las amplias terrazas 
+                hasta los detalles de diseño más exclusivos.
+              </p>
+              <div className="flex flex-wrap gap-4 pt-4">
+                <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                  Tour Virtual 360°
+                </span>
+                <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                  Galería HD
+                </span>
+                <span className="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
+                  Planos Arquitectónicos
+                </span>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-3xl transform rotate-6"></div>
+                <Stack
+                  randomRotation={true}
+                  sensitivity={180}
+                  sendToBackOnClick={false}
+                  cardDimensions={{ width: 350, height: 350 }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section - Completamente renovado */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Características Excepcionales
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Cada detalle de esta propiedad ha sido cuidadosamente diseñado 
+              para ofrecerte la mejor experiencia de vida costera.
             </p>
           </div>
-          <div className="flex justify-center mx-4 w-80 h-80">
-            <Stack
-              randomRotation={true}
-              sensitivity={180}
-              sendToBackOnClick={false}
-              cardDimensions={{ width: 300, height: 300 }}
-            />
-          </div>
-        </div>
-      </div>
 
-      {/* section 2 */}
-      <section className="text-gray-600 body-font">
-        <div className="text-center mt-10">
-              <h1 className="text-4xl text-black">Acerca de esta propeidad </h1>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div className="order-2 lg:order-1">
+              <img
+                className="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
+                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=500&fit=crop"
+                alt="Vista interior de la propiedad"
+              />
             </div>
-        <div className="container px-5 py-10 mx-auto flex flex-wrap">
-  
-          <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
-            <img
-              alt="feature"
-              className="object-cover object-center h-full w-full"
-              src="https://dummyimage.com/460x500"
-            />
-          </div>
 
-          <div className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left">
-            
-            <div className="flex flex-col mb-10 lg:items-start items-center">
-              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-6 h-6"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                </svg>
-              </div>
-              <div className="flex-grow">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
-                  Shooting Stars
-                </h2>
-                <p className="leading-relaxed text-base">
-                  Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                  taxidermy. Gastropub indxgo juice poutine.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col mb-10 lg:items-start items-center">
-              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-6 h-6"
-                  viewBox="0 0 24 24"
-                >
-                  <circle cx="6" cy="6" r="3"></circle>
-                  <circle cx="6" cy="18" r="3"></circle>
-                  <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
-                </svg>
-              </div>
-              <div className="flex-grow">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
-                  The Catalyzer
-                </h2>
-                <p className="leading-relaxed text-base">
-                  Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                  taxidermy. Gastropub indxgo juice poutine.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col mb-10 lg:items-start items-center">
-              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-6 h-6"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <div className="flex-grow">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
-                  Neptune
-                </h2>
-                <p className="leading-relaxed text-base">
-                  Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                  taxidermy. Gastropub indxgo juice poutine.
-                </p>
-              </div>
+            <div className="order-1 lg:order-2 space-y-8">
+              {propertyFeatures.map((feature, idx) => (
+                <div key={idx} className="flex items-start space-x-4 group">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    {feature.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stack */}
-
-      {/* amenidades */}
-      <section className="py-14">
-        <div className="max-w-screen-xl mx-auto px-4 text-center md:px-8">
-          <div className="max-w-2xl mx-auto">
-            <h3 className=" text-6xl sm:text-5xl font-vanitasb">
-              The fastest way to launch a product
-            </h3>
-            <div className="mt-5">
-              <p className="mt-3 font-vanitasr text-xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                congue, nisl eget molestie varius, enim ex faucibus purus.
-              </p>
-            </div>
+      {/* Testimonials Section - Mejorado */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Experiencias Reales
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Descubre lo que dicen quienes han vivido la experiencia de esta ubicación privilegiada.
+            </p>
           </div>
-          <div className="mt-12">
-            <ul className="grid gap-y-8 gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
-              {features.map((item, idx) => (
-                <li key={idx} className="space-y-3">
-                  <div className="w-12 h-12 mx-auto bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center">
-                    <img src={item.icon} />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {testimonials.map((testimonial, idx) => (
+              <div key={idx} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="flex items-center mb-6">
+                  <svg className="w-8 h-8 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <div className="flex text-blue-500">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
                   </div>
-                  <h4 className="text-2xl font-vanitasb">{item.title}</h4>
-                  <p className="font-vanitasr text-lg">{item.desc}</p>
-                </li>
-              ))}
-            </ul>
+                </div>
+                <p className="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                  "{testimonial.text}"
+                </p>
+                <div className="flex items-center">
+                  <img
+                    className="w-12 h-12 rounded-full object-cover mr-4"
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                  />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">
+                      {testimonial.name}
+                    </h4>
+                    <p className="text-gray-500 text-sm">
+                      {testimonial.role}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Amenidades Section - Renovado */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Amenidades de Lujo
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Disfruta de servicios y comodidades diseñados para elevar tu calidad de vida 
+              en este exclusivo complejo residencial frente al mar.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {features.map((item, idx) => (
+              <div key={idx} className="text-center group hover:transform hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 mx-auto bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-2xl flex items-center justify-center mb-6 group-hover:shadow-lg">
+                  <img src={item.icon} className="w-8 h-8" alt={item.title} />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-800">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              ¿Listo para Hacer Realidad tu Sueño?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              No dejes pasar esta oportunidad única. Contacta con nosotros hoy mismo 
+              y da el primer paso hacia tu nueva vida frente al mar.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <button className="px-8 py-4 bg-white text-blue-900 hover:bg-gray-100 font-semibold rounded-full text-lg shadow-xl transform hover:scale-105 transition-all duration-300">
+                Contactar Ahora
+              </button>
+              <button className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold rounded-full text-lg transition-all duration-300">
+                Descargar Brochure
+              </button>
+            </div>
           </div>
         </div>
       </section>
