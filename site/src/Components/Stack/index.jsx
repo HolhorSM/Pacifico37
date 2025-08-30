@@ -1,10 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion , useMotionValue, useTransform } from "motion/react";
 import { useState } from "react";
-import foto1 from "../../assets/Fotos/1.jpg";
-import foto2 from "../../assets/Fotos/4.jpg";
-import foto3 from "../../assets/Fotos/5.jpg";
-import foto4 from "../../assets/Fotos/6.jpg";
+import { fotos } from "../../assets/Fotos";
 
 function CardRotate({ children, onSendToBack, sensitivity }) {
   const x = useMotionValue(0);
@@ -51,10 +48,10 @@ export default function Stack({
     cardsData.length
       ? cardsData
       : [
-        { id: 1, img: foto1 },
-        { id: 2, img: foto2 },
-        { id: 3, img: foto3 },
-        { id: 4, img: foto4 }
+        { id: 1, img: fotos.Floower },
+        { id: 2, img: fotos.Gym },
+        { id: 3, img: fotos.Pool4 },
+        { id: 4, img: fotos.kitchenv1 }
       ]
   );
 

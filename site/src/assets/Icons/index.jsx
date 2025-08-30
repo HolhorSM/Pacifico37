@@ -85,13 +85,13 @@ export const propertyFeatures = [
     {
       name: "María González",
       role: "Propietaria anterior",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=150&h=150&fit=crop&crop=face",
+      
       text: "Vivir en esta propiedad fue una experiencia increíble. Las vistas al mar y la tranquilidad del lugar hacen que cada día se sienta como unas vacaciones."
     },
     {
       name: "Carlos Mendoza",
       role: "Vecino de la zona",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+     
       text: "Es una de las mejores inversiones que he visto en la zona. La ubicación es perfecta y la calidad de construcción es excepcional."
     }
   ];
