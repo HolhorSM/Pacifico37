@@ -107,7 +107,7 @@ export default function Navbar() {
             ))}
             <div className="pt-4 border-t border-gray-100">
               <a
-                href="/contact"
+                href="/Gallery"
                 className="flex items-center justify-center w-full px-4 py-3 text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all"
                 onClick={() => setState(false)}
               >

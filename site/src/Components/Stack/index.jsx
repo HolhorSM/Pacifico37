@@ -51,7 +51,9 @@ export default function Stack({
         { id: 1, img: fotos.Floower },
         { id: 2, img: fotos.Gym },
         { id: 3, img: fotos.Pool4 },
-        { id: 4, img: fotos.kitchenv1 }
+        { id: 4, img: fotos.kitchenv1 },
+        { id: 5, img: fotos.Room2 },
+        { id: 6, img: fotos.thiss }
       ]
   );
 

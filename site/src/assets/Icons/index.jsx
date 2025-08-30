@@ -6,6 +6,7 @@ import segurity from './segurity.png'
 import tenis from './tenis.png'
 import padel from './padel.png'
 import pool from './pool.png'
+import airbnb from "./airbnb.svg"
 
 export const icon = {
     gym,
@@ -14,7 +15,8 @@ export const icon = {
     segurity,
     tenis,
     padel,
-    pool
+    pool,
+    airbnb
 }
 export const features = [
    {
@@ -54,21 +56,20 @@ export const propertyFeatures = [
     {
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 15v4M16 15v4" />
-        </svg>
+  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12h18v6H3v-6zM5 12V8a2 2 0 012-2h10a2 2 0 012 2v4M5 18v2M19 18v2" />
+</svg>
       ),
-      title: "Vista Panorámica",
-      description: "Disfruta de impresionantes vistas al océano Pacífico desde todas las habitaciones principales."
+      title: "Amueblado",
+      description: "Pacifico 37 ya esta equipada con muebles para que desde el dia 1 puedas relajarte sin preocuparte por lo demas."
     },
     {
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707" />
-        </svg>
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18v10H3V10zM7 6h10v4H7V6zM9 13h6v7H9v-7zM12 16v4" />
+</svg>
       ),
-      title: "Ubicación Premium",
-      description: "Situada en una de las zonas más exclusivas de la costa, con acceso directo a la playa."
+      title: "Superficie de terreno y construncion",
+      description: "Esta propiedad esta en una superficie de 96 Mts² y costruida en 70 Mts²."
     },
     {
       icon: (
@@ -77,21 +78,20 @@ export const propertyFeatures = [
         </svg>
       ),
       title: "Arquitectura Moderna",
-      description: "Diseño contemporáneo con acabados de lujo y espacios amplios perfectamente distribuidos."
+      description: "Diseño Moderno y agradable a la vista para que te sientas en casa."
     }
   ];
 
   export const testimonials = [
     {
-      name: "María González",
-      role: "Propietaria anterior",
-      
-      text: "Vivir en esta propiedad fue una experiencia increíble. Las vistas al mar y la tranquilidad del lugar hacen que cada día se sienta como unas vacaciones."
+      name: "Alanna Sophía",
+      role: "Huesped anterior",
+      text: "Excelente lugar para hospedarse, es bastante tranquilo y adecuado para ir en familia, las albercas bastante limpias. El departamento muy limpio y acogedor. Yoshio fue un anfitrión increíble, muy atento siempre a las dudas y bastante amigable, fue muy ameno poder hospedarse ahí gracias a la confianza que él nos daba. RECOMENDADO 100%"
     },
     {
-      name: "Carlos Mendoza",
-      role: "Vecino de la zona",
+      name: "Jorge",
+      role: "Huesped anterior",
      
-      text: "Es una de las mejores inversiones que he visto en la zona. La ubicación es perfecta y la calidad de construcción es excepcional."
+      text: "Excelente ubicación del Airbnb, muy buena comunicación del anfitrión! Residencial muy bonito con albercas limpias."
     }
   ];

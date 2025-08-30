@@ -47,9 +47,11 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href="#Carac"> 
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-full text-lg shadow-xl transform hover:scale-105 transition-all duration-300">
                 Ver Detalles Completos
               </button>
+              </a>
              
             </div>
           </div>
@@ -62,24 +64,12 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div className="space-y-6">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                Explora Cada Rincón de tu Futuro Hogar
+                Tu oportunidad para negocio o tu casa de playa ideal.
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Navega por nuestra galería interactiva y descubre todos los
-                espacios que hacen de esta propiedad un lugar único. Desde las
-                amplias terrazas hasta los detalles de diseño más exclusivos.
+             Pacífico 37 se encuentra en Terrasol Diamante, un exclusivo complejo de villas de lujo diseñado para que tú y tu familia disfruten momentos inolvidables. Nuestros huéspedes destacan a Pacífico 37 como un lugar excepcional para descansar y vivir experiencias únicas
               </p>
-              <div className="flex flex-wrap gap-4 pt-4">
-                <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                  Tour Virtual 360°
-                </span>
-                <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">
-                  Galería HD
-                </span>
-                <span className="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
-                  Planos Arquitectónicos
-                </span>
-              </div>
+              
             </div>
             <div className="flex justify-center">
               <div className="relative">
@@ -97,11 +87,11 @@ export default function Home() {
       </section>
 
       {/* Features Section - Completamente renovado */}
-      <section className="py-20 bg-white">
+      <section id="Carac" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Características Excepcionales
+              Características de la propiedad
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Cada detalle de esta propiedad ha sido cuidadosamente diseñado
@@ -113,7 +103,7 @@ export default function Home() {
             <div className="order-2 lg:order-1">
               <img
                 className="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
-                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=500&fit=crop"
+                src= {fotos.FrontView}
                 alt="Vista interior de la propiedad"
               />
             </div>
