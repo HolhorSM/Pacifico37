@@ -3,12 +3,16 @@ import React from 'react'
 export default function Footer() {
   const footerNavs = [
     {
-      label: "Explorar",
+      label: "About",
       items: [
         { href: '/', name: 'Inicio' },
-        { href: '/gallery', name: 'Galería' },
-        { href: '/virtual-tour', name: 'Tour Virtual' },
-        { href: '/location', name: 'Ubicación' }
+       
+      ]
+    },
+    {
+      label: "",
+      items: [
+        {href: '/', name: 'Inicio'}
       ]
     }
   ];

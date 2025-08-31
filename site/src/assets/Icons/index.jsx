@@ -1,11 +1,11 @@
 
-import gym from './gym.png'
-import cold from './cold.png'
-import shower from './shower.png'
-import segurity from './segurity.png'
-import tenis from './tenis.png'
-import padel from './padel.png'
-import pool from './pool.png'
+import gym from './gym.svg'
+import cold from './cold.svg'
+import shower from './shower.svg'
+import segurity from './segurity.svg'
+import tenis from './tenis.svg'
+import padel from './padel.svg'
+import pool from './pool.svg'
 import airbnb from "./airbnb.svg"
 
 export const icon = {
