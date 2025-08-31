@@ -1,177 +1,195 @@
-import React from "react";
+import { useState } from 'react';
 import { fotos } from "../../assets/Fotos";
+import { X } from 'lucide-react';
 
 export default function index() {
+   // eslint-disable-next-line react-hooks/rules-of-hooks
+   const [selectedImage, setSelectedImage] = useState(null);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = (imageSrc) => {
+    setSelectedImage(imageSrc);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+  };
   return (
-  <section className="text-gray-600 body-font">
-  <div className="container px-5 py-24 mx-auto">
-    <div className="flex flex-col text-center w-full mb-20">
-      <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
-      <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+      <section className="text-gray-600 body-font">
+        <div className="container px-5 py-24 mx-auto">
+  <div className="flex flex-col text-center w-full mb-20">
+    <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Oceano Pacifico 37</h1>
+    <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+  </div>
+  <div className="flex flex-wrap justify-center ">
+    <div className="lg:w-1/3 sm:w-1/2 w-full p-4">
+      <div className="flex relative cursor-pointer transform hover:scale-105 transition-transform duration-200">
+        <img 
+          alt="gallery" 
+          className="w-full h-64 object-cover object-center rounded-lg shadow-md" 
+          src={fotos.Gymv1}
+          onClick={() => openModal(fotos.Gymv1)}
+        />
+      </div>
     </div>
-    <div className="flex flex-wrap -m-4">
-      <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={fotos.FrontView} />
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
+    <div className="lg:w-1/3 sm:w-1/2 w-full p-4">
+      <div className="flex relative cursor-pointer transform hover:scale-105 transition-transform duration-200">
+        <img 
+          alt="gallery" 
+          className="w-full h-64 object-cover object-center rounded-lg shadow-md" 
+          src={fotos.Floower}
+          onClick={() => openModal(fotos.Floower)}
+        />
       </div>
-      <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={fotos.Gymv1} />
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
+    </div>
+    <div className="lg:w-1/3 sm:w-1/2 w-full p-4">
+      <div className="flex relative cursor-pointer transform hover:scale-105 transition-transform duration-200">
+        <img 
+          alt="gallery" 
+          className="w-full h-64 object-cover object-center rounded-lg shadow-md" 
+          src={fotos.Garden}
+          onClick={() => openModal(fotos.Garden)}
+        />
       </div>
-      <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={fotos.Floower} />
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
+    </div>
+    <div className="lg:w-1/3 sm:w-1/2 w-full p-4">
+      <div className="flex relative cursor-pointer transform hover:scale-105 transition-transform duration-200">
+        <img 
+          alt="gallery" 
+          className="w-full h-64 object-cover object-center rounded-lg shadow-md" 
+          src={fotos.Gym}
+          onClick={() => openModal(fotos.Gym)}
+        />
       </div>
-      <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={fotos.Garden} />
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
+    </div>
+    <div className="lg:w-1/3 sm:w-1/2 w-full p-4">
+      <div className="flex relative cursor-pointer transform hover:scale-105 transition-transform duration-200">
+        <img 
+          alt="gallery" 
+          className="w-full h-64 object-cover object-center rounded-lg shadow-md" 
+          src={fotos.Gymv2}
+          onClick={() => openModal(fotos.Gymv2)}
+        />
       </div>
-      <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={fotos.Gym}/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
+    </div>
+    <div className="lg:w-1/3 sm:w-1/2 w-full p-4">
+      <div className="flex relative cursor-pointer transform hover:scale-105 transition-transform duration-200">
+        <img 
+          alt="gallery" 
+          className="w-full h-64 object-cover object-center rounded-lg shadow-md" 
+          src={fotos.Pool1}
+          onClick={() => openModal(fotos.Pool1)}
+        />
       </div>
-      <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={fotos.Gymv2 }/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
+    </div>
+    <div className="lg:w-1/3 sm:w-1/2 w-full p-4">
+      <div className="flex relative cursor-pointer transform hover:scale-105 transition-transform duration-200">
+        <img 
+          alt="gallery" 
+          className="w-full h-64 object-cover object-center rounded-lg shadow-md" 
+          src={fotos.Pool2}
+          onClick={() => openModal(fotos.Pool2)}
+        />
       </div>
-       <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={fotos.Pool1 }/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
+    </div>
+    <div className="lg:w-1/3 sm:w-1/2 w-full p-4">
+      <div className="flex relative cursor-pointer transform hover:scale-105 transition-transform duration-200">
+        <img 
+          alt="gallery" 
+          className="w-full h-64 object-cover object-center rounded-lg shadow-md" 
+          src={fotos.Pool3}
+          onClick={() => openModal(fotos.Pool3)}
+        />
       </div>
-       <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={fotos.Pool2 }/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
+    </div>
+    <div className="lg:w-1/3 sm:w-1/2 w-full p-4">
+      <div className="flex relative cursor-pointer transform hover:scale-105 transition-transform duration-200">
+        <img 
+          alt="gallery" 
+          className="w-full h-64 object-cover object-center rounded-lg shadow-md" 
+          src={fotos.Pool4}
+          onClick={() => openModal(fotos.Pool4)}
+        />
       </div>
-       <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={fotos.Pool3 }/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
+    </div>
+    <div className="lg:w-1/3 sm:w-1/2 w-full p-4">
+      <div className="flex relative cursor-pointer transform hover:scale-105 transition-transform duration-200">
+        <img 
+          alt="gallery" 
+          className="w-full h-64 object-cover object-center rounded-lg shadow-md" 
+          src={fotos.Room2}
+          onClick={() => openModal(fotos.Room2)}
+        />
       </div>
-       <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={fotos.Pool4}/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
+    </div>
+    <div className="lg:w-1/3 sm:w-1/2 w-full p-4">
+      <div className="flex relative cursor-pointer transform hover:scale-105 transition-transform duration-200">
+        <img 
+          alt="gallery" 
+          className="w-full h-64 object-cover object-center rounded-lg shadow-md" 
+          src={fotos.Pool5}
+          onClick={() => openModal(fotos.Pool5)}
+        />
       </div>
-       <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={fotos.Room2 }/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
+    </div>
+    <div className="lg:w-1/3 sm:w-1/2 w-full p-4">
+      <div className="flex relative cursor-pointer transform hover:scale-105 transition-transform duration-200">
+        <img 
+          alt="gallery" 
+          className="w-full h-64 object-cover object-center rounded-lg shadow-md" 
+          src={fotos.Pool7}
+          onClick={() => openModal(fotos.Pool7)}
+        />
       </div>
-       <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={fotos.Pool5}/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
+    </div>
+    <div className="lg:w-1/3 sm:w-1/2 w-full p-4">
+      <div className="flex relative cursor-pointer transform hover:scale-105 transition-transform duration-200">
+        <img 
+          alt="gallery" 
+          className="w-full h-64 object-cover object-center rounded-lg shadow-md" 
+          src={fotos.RontBath}
+          onClick={() => openModal(fotos.RontBath)}
+        />
       </div>
-       <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={fotos.Room2}/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-       <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={fotos.Pool7}/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-       <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={fotos.RontBath}/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-       <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={fotos.kitchenv1}/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
+    </div>
+    <div className="lg:w-1/3 sm:w-1/2 w-full p-4">
+      <div className="flex relative cursor-pointer transform hover:scale-105 transition-transform duration-200">
+        <img 
+          alt="gallery" 
+          className="w-full h-64 object-cover object-center rounded-lg shadow-md" 
+          src={fotos.kitchenv1}
+          onClick={() => openModal(fotos.kitchenv1)}
+        />
       </div>
     </div>
   </div>
-</section>
+</div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-10 flex items-center justify-center z-50 p-4"
+          onClick={closeModal}
+        >
+          <div className="relative max-w-7xl max-h-full">
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-white hover:text-gray-300 z-60 bg-black bg-opacity-50 rounded-full p-2 transition-colors duration-200"
+            >
+              <X size={24} />
+            </button>
+            <img
+              src={selectedImage}
+              alt="Imagen ampliada"
+              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
+    </section>
   );
 }

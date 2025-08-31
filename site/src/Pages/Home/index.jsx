@@ -1,4 +1,4 @@
-import React from "react";
+import {} from "react";
 import Stack from "../../Components/Stack";
 import { fotos } from "../../assets/Fotos";
 import {
@@ -9,6 +9,10 @@ import {
 } from "../../assets/Icons";
 
 export default function Home() {
+
+
+
+
   return (
     <main className="pt-16">
       {/* Hero Section - Mejorado */}
@@ -87,7 +91,7 @@ export default function Home() {
                   randomRotation={true}
                   sensitivity={180}
                   sendToBackOnClick={false}
-                  cardDimensions={{ width: 350, height: 350 }}
+                  cardDimensions={{ width: 290, height: 290 }}
                 />
               </div>
             </div>
