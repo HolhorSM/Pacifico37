@@ -1,18 +1,22 @@
 import React from 'react'
+import { icon } from '../../assets/Icons';
 
 export default function Footer() {
   const footerNavs = [
     {
-      label: "About",
       items: [
-        { href: '/', name: 'Inicio' },
+        { href: '/', name: 'About' },
        
       ]
     },
     {
-      label: "",
       items: [
-        {href: '/', name: 'Inicio'}
+        {href: '/', name: 'Linkeind'}
+      ]
+    },
+    { 
+      items: [
+        {href: '/', name: 'Home'}
       ]
     }
   ];
@@ -31,18 +35,23 @@ export default function Footer() {
       href: 'https://instagram.com/pacifico37',
       name: 'Instagram',
       icon: (
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987s11.987-5.367 11.987-11.987C24.014 5.367 18.647.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.283C4.151 14.81 3.621 13.539 3.621 12.017s.53-2.793 1.505-3.705C5.999 7.519 7.152 7.029 8.449 7.029s2.448.49 3.323 1.283c.975.912 1.505 2.183 1.505 3.705s-.53 2.793-1.505 3.705c-.875.793-2.026 1.266-3.323 1.266zm7.424 0c-1.297 0-2.448-.49-3.323-1.283-.975-.912-1.505-2.183-1.505-3.705s.53-2.793 1.505-3.705c.875-.793 2.026-1.283 3.323-1.283s2.448.49 3.323 1.283c.975.912 1.505 2.183 1.505 3.705s-.53 2.793-1.505 3.705c-.875.793-2.026 1.266-3.323 1.266z"/>
-        </svg>
+   <svg
+  xmlns="http://www.w3.org/2000/svg"
+  className="w-5 h-5"
+  fill="currentColor"
+  viewBox="0 0 24 24"
+>
+  <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.25-.88a1.13 1.13 0 1 1-2.25 0 1.13 1.13 0 0 1 2.25 0z"/>
+</svg>
       )
     },
     {
-      href: 'https://youtube.com/@pacifico37',
-      name: 'YouTube',
+      href: 'https://www.airbnb.mx/rooms/1314534438515488460',
+      name: 'Airbnb',
       icon: (
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-        </svg>
+        <div className='w-6 '>
+          <img className='' src={icon.airbnb} alt="" />
+        </div>
       )
     },
     {
@@ -57,10 +66,9 @@ export default function Footer() {
   ];
 
   const contactInfo = {
-    address: "Av. Costera Miguel Alemán 37, Zona Hotelera, Acapulco, Guerrero",
-    phone: "+52 (744) 123-4567",
+    address: "Oceano Pacífico 37, Villas Terrasol, Aeropuerto, 39893 Acapulco de Juárez, Gro.",
+    phone: "+527442584848",
     email: "info@pacifico37.mx",
-    hours: "Lun - Dom: 9:00 AM - 8:00 PM"
   };
 
   return (
@@ -72,11 +80,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21l18-18M9 9l12-12M21 3L9 15" />
-                </svg>
-              </div>
+
               <span className="text-2xl font-bold">
                 Pacifico<span className="text-blue-400">37</span>
               </span>
@@ -135,15 +139,12 @@ export default function Footer() {
           {/* Navigation Sections */}
           {footerNavs.map((section, idx) => (
             <div key={idx}>
-              <h4 className="text-lg font-semibold mb-6 text-white">
-                {section.label}
-              </h4>
               <ul className="space-y-3">
                 {section.items.map((item, itemIdx) => (
                   <li key={itemIdx}>
                     <a
                       href={item.href}
-                      className="text-gray-300 hover:text-blue-400 text-sm transition-colors duration-200 hover:underline"
+                      className="text-gray-300 hover:text-blue-400 text-lg transition-colors duration-200 hover:underline"
                     >
                       {item.name}
                     </a>
@@ -162,17 +163,6 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © 2024 Pacifico37. Todos los derechos reservados.
-            </div>
-            <div className="flex flex-wrap gap-6 text-sm">
-              <a href="/privacy" className="text-gray-400 hover:text-white transition-colors">
-                Política de Privacidad
-              </a>
-              <a href="/terms" className="text-gray-400 hover:text-white transition-colors">
-                Términos de Servicio
-              </a>
-              <a href="/cookies" className="text-gray-400 hover:text-white transition-colors">
-                Política de Cookies
-              </a>
             </div>
           </div>
         </div>

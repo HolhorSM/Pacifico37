@@ -7,6 +7,7 @@ import tenis from './tenis.svg'
 import padel from './padel.svg'
 import pool from './pool.svg'
 import airbnb from "./airbnb.svg"
+import pacifico37 from "./Pacifico37.svg"
 
 export const icon = {
     gym,
@@ -16,7 +17,8 @@ export const icon = {
     tenis,
     padel,
     pool,
-    airbnb
+    airbnb,
+    pacifico37
 }
 export const features = [
    {

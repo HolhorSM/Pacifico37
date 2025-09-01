@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { icon } from "../../assets/Icons";
 
 export default function Navbar() {
   const [state, setState] = useState(false);
@@ -27,14 +28,9 @@ export default function Navbar() {
           {/* Logo mejorado */}
           <div className="flex-shrink-0">
             <a href="/" className="flex items-center space-x-2 group">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21l18-18M9 9l12-12M21 3L9 15" />
-                </svg>
-              </div>
-              <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                Pacifico<span className="text-blue-600">37</span>
-              </span>
+             <div className="w-50 h-50">
+                <img src={icon.pacifico37} />
+             </div>
             </a>
           </div>
 
