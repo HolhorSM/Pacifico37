@@ -38,19 +38,19 @@ export default function ContactSection() {
               <p className="mt-1">Oceano Pacífico 37, Villas Terrasol, Aeropuerto, 39893 Acapulco de Juárez, Gro.</p>
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
+              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">CORREO</h2>
               <a className="text-indigo-500 leading-relaxed" href="mailto:example@email.com">example@email.com</a>
-              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
-              <p className="leading-relaxed">123-456-7890</p>
+              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">TELEFONO</h2>
+              <p className="leading-relaxed">+527442584848</p>
             </div>
           </div>
         </div>
         <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-          <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
-          <p className="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion axe</p>
+          <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">Contactanos</h2>
+          <p className="leading-relaxed mb-5 text-gray-600">Contáctanos para agendar una visita, recibir informes de la propiedad o agendar tus futuras vacaciones en Pacifico37. </p>
           <div>
             <div className="relative mb-4">
-              <label htmlFor="name" className="leading-7 text-sm text-gray-600">Name</label>
+              <label htmlFor="name" className="leading-7 text-sm text-gray-600">Nombre</label>
               <input 
                 type="text" 
                 id="name" 
@@ -61,7 +61,7 @@ export default function ContactSection() {
               />
             </div>
             <div className="relative mb-4">
-              <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email</label>
+              <label htmlFor="email" className="leading-7 text-sm text-gray-600">Correo</label>
               <input 
                 type="email" 
                 id="email" 
@@ -88,7 +88,7 @@ export default function ContactSection() {
               Enviar
             </button>
           </div>
-          <p className="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
+          <p className="text-xs text-gray-500 mt-3">Tu datos estaran encriptados y seguros, solo los podra ver el adminstrador de la pagina.</p>
         </div>
       </div>
     </section>
