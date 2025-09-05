@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import supabase from "../../config/supaconfig";
 
+
 export default function ContactSection() {
   
   const {
@@ -16,6 +17,7 @@ export default function ContactSection() {
       telefono: "",
     },
   });
+
 
   const onSubmit = async (data, e) => {
     e.preventDefault();
@@ -142,15 +144,17 @@ export default function ContactSection() {
                 })}
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
-               
             </div>
-           
+
             {errors.telefono && (
               <p className="text-red-500">
                 El teléfono debe tener exactamente 10 dígitos
               </p>
             )}
+
+          <div className="m-5">
             
+          </div>
             <button
               type="submit"
               className="w-full text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
@@ -160,10 +164,9 @@ export default function ContactSection() {
           </form>
           <div className="mt-3">
             <a href="http://" target="_blank">
-            <button 
-            className="w-full text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-              Whatsapp
-            </button>
+              <button className="w-full text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                Whatsapp
+              </button>
             </a>
           </div>
 

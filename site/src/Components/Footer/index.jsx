@@ -11,7 +11,7 @@ export default function Footer() {
     },
     {
       items: [
-        {href: '/', name: 'Linkeind'}
+        {href: 'https://www.linkedin.com/in/yoshio-soto-63a042232', name: 'Linkedin'}
       ]
     },
     { 
@@ -55,7 +55,7 @@ export default function Footer() {
       )
     },
     {
-      href: 'https://wa.me/528123456789',
+      href: 'https://wa.me/7442584848',
       name: 'WhatsApp',
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
